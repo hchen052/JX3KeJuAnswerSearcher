@@ -24,6 +24,15 @@ var/
 .installed.cfg
 *.egg
 
+# Microsoft.VC90.CRT
+Microsoft.VC90.CRT/
+
+# PyCharm Project Manage Folder
+.idea/
+
+# eric6project 
+_eric6project/
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -107,3 +116,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
