@@ -1,4 +1,13 @@
 # -*- coding: utf-8 -*-
+# Author : Hu Chen
+# MailTo : hchen052@gmail.com
+# QQ     :
+# Blog   :
+# Github : https://github.com/hchen052/JX3KeJuAnswerSearcher
+# Create : 2015-08-13
+# Version: 1.0
+#
+# Project main file
 
 """
 Module implementing MainWindow.

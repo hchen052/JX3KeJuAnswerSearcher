@@ -1,11 +1,15 @@
 # -*- coding:utf-8 -*-
-# Author : huchen
+# Author : Hu Chen
 # MailTo : hchen052@gmail.com
 # QQ     :
-# Blog   : 
+# Blog   :
+# Github : https://github.com/hchen052/JX3KeJuAnswerSearcher
 # Create : 2015-08-13
 # Version: 1.0
-  
+#
+# Part of project jx3kejusearch
+# Provide search API
+#
 # 剑网3科举考试答案查询器
 # 目前题目数量为1588条
 

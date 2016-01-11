@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 # This Python file uses the following encoding: utf-8
+# Author : Hu Chen
+# MailTo : hchen052@gmail.com
+# QQ     :
+# Blog   :
+# Github : https://github.com/hchen052/JX3KeJuAnswerSearcher
+# Create : 2015-08-13
+# Version: 1.0
+#
+# py2exe setup config
 
 from distutils.core import setup
 import py2exe
