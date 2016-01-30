@@ -47,6 +47,7 @@ WELCOME_TXT = u'''\
 版本历史：
 1.  2015-12-13    v0.1.0          第一次发布
 2.  2016-01-03    v0.1.1          增加图标
+3.  2016-01-30    v0.1.2          增加“总在最前”功能
 '''
 
 
@@ -84,11 +85,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     @pyqtSignature("")
     def on_action_ontop_triggered(self):
         if self.action_ontop.isChecked():
-            #self.hide()
             self.setWindowFlags(self.flags | Qt.WindowStaysOnTopHint)
             self.show()
         else:
-            #self.hide()
             self.setWindowFlags(self.flags)
             self.show()
 
