@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -73,6 +76,7 @@
     <property name="title">
      <string>点我点我....</string>
     </property>
+    <addaction name="action_ontop"/>
     <addaction name="action_ESC"/>
     <addaction name="separator"/>
     <addaction name="action_Alt_Q"/>
@@ -96,6 +100,17 @@
    </property>
    <property name="shortcut">
     <string>Alt+Q</string>
+   </property>
+  </action>
+  <action name="action_ontop">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>总在最前</string>
    </property>
   </action>
  </widget>

@@ -25,6 +25,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(547, 826)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -69,6 +70,11 @@ class Ui_MainWindow(object):
         self.action_ESC.setObjectName(_fromUtf8("action_ESC"))
         self.action_Alt_Q = QtGui.QAction(MainWindow)
         self.action_Alt_Q.setObjectName(_fromUtf8("action_Alt_Q"))
+        self.action_ontop = QtGui.QAction(MainWindow)
+        self.action_ontop.setCheckable(True)
+        self.action_ontop.setChecked(True)
+        self.action_ontop.setObjectName(_fromUtf8("action_ontop"))
+        self.menu.addAction(self.action_ontop)
         self.menu.addAction(self.action_ESC)
         self.menu.addSeparator()
         self.menu.addAction(self.action_Alt_Q)
@@ -87,6 +93,7 @@ class Ui_MainWindow(object):
         self.action_ESC.setShortcut(_translate("MainWindow", "Esc", None))
         self.action_Alt_Q.setText(_translate("MainWindow", "退出", None))
         self.action_Alt_Q.setShortcut(_translate("MainWindow", "Alt+Q", None))
+        self.action_ontop.setText(_translate("MainWindow", "总在最前", None))
 
 import resource_rc
 

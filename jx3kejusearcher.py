@@ -18,6 +18,7 @@ from PyQt4 import QtGui
 from Ui_jx3kejusearcher import Ui_MainWindow
 from PyQt4.QtCore import pyqtSignature
 from PyQt4.QtGui import QMainWindow
+from PyQt4.QtCore import Qt
 
 # import customer module
 import PyJX3KeJu
@@ -53,12 +54,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Class documentation goes here.
     """
-    def __init__(self, parent=None):
+    def __init__(self, parent=None,  ontop=True):
         QMainWindow.__init__(self, parent)
         self.setupUi(self)
         self.setWindowTitle(QtGui.QApplication.translate("MainWindow", TITLE_NAME, None, QtGui.QApplication.UnicodeUTF8))
         self.input_line.setText(u'请输入题目的首字母...')
         self.ans_txt.setText(WELCOME_TXT)
+        self.flags = Qt.WindowFlags()
+        if self.action_ontop.isChecked():
+            self.setWindowFlags(self.flags | Qt.WindowStaysOnTopHint)
 
     @pyqtSignature("QString")
     def on_input_line_textChanged(self, p0):
@@ -76,6 +80,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def search_question(self):
         answers = PyJX3KeJu.SearchMain(self.input_line.text())
         self.ans_txt.setText(answers)
+    
+    @pyqtSignature("")
+    def on_action_ontop_triggered(self):
+        if self.action_ontop.isChecked():
+            #self.hide()
+            self.setWindowFlags(self.flags | Qt.WindowStaysOnTopHint)
+            self.show()
+        else:
+            #self.hide()
+            self.setWindowFlags(self.flags)
+            self.show()
 
 
 if __name__ == "__main__":
@@ -84,4 +99,4 @@ if __name__ == "__main__":
     dlg.show()
     sys.exit(app.exec_())
     
-
+    
